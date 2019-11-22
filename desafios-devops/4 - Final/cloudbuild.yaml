@@ -5,11 +5,6 @@ steps:
     args: ["version"]
     env: ["GOPATH=go"]   
 
-  - id: go_build
-    name: "gcr.io/cloud-builders/go"
-    args: ["build","app"]
-    env: ["GOPATH=go"] 
-
   - id: go_test
     name: "gcr.io/cloud-builders/go"
     args: ["test","app"]
