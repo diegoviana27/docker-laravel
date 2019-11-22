@@ -5,6 +5,6 @@ RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix .
 
 FROM alpine:latest
 WORKDIR /app/
-COPY --from=builder /go/src/desafio/desafio /app/desafio
+COPY --from=builder ./ /app
 EXPOSE 8000
-ENTRYPOINT ["./desafio"]
+ENTRYPOINT ["./app"]
