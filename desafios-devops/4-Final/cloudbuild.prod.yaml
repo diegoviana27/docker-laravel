@@ -29,15 +29,15 @@ steps:
     args:
       - '-c'
       - |
-        sed 's#img-app-deployment#gcr.io/$PROJECT_ID/app-go:$SHORT_SHA#g' deployment.yaml > deployment-new.yaml;
-        cat deployment-new.yaml;
+        sed 's#img-app-deployment#gcr.io/$PROJECT_ID/app-go:$SHORT_SHA#g' desafios-devops/4-Final/deployment.yaml > desafios-devops/4-Final/deployment-new.yaml;
+        cat desafios-devops/4-Final/deployment-new.yaml;
 
   - id: 'Deploying k8s' 
     name: 'gcr.io/cloud-builders/kubectl'   
     args:
       - 'apply'
       - '-f'
-      - 'deployment-new.yaml'
+      - 'desafios-devops/4-Final/deployment-new.yaml'
     env:
       - 'CLOUDSDK_COMPUTE_ZONE=us-central1'
       - 'CLOUDSDK_CONTAINER_CLUSTER=cluster-docker-laravel'    
