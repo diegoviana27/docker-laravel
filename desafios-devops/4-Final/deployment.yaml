@@ -16,4 +16,4 @@ spec:
       - name: desafio-go
         image: img-app-deployment
         ports:
-        - containerPort: 80
+        - containerPort: 8000
