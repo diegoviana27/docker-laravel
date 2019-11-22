@@ -1,0 +1,17 @@
+steps:
+
+  - id: go_version
+    name: "gcr.io/cloud-builders/go"
+    args: ["version"]
+    env: ["GOPATH=go"]   
+
+  - id: go_build
+    name: "gcr.io/cloud-builders/go"
+    args: ["build","./desafios-devops/4-Final/src"]
+    env: ["GOPATH=go"]     
+
+  - id: go_test
+    name: "gcr.io/cloud-builders/go"
+    args: ["test","./desafios-devops/4-Final/src"]
+    env: ["GOPATH=go"]  
+
